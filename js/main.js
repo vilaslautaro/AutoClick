@@ -4,6 +4,8 @@ $(document).ready(function () {
         for (const carritoVisual of carritoParseado) {
             carritoProductos.push(new Productos(carritoVisual.id, carritoVisual.nombre, carritoVisual.descripcion, carritoVisual.precio, carritoVisual.imagen, carritoVisual.cantidadEnCarrito, carritoVisual.tipo));
         }
+        // ejecuto un evento que cuando se ejecuta un click que llama la funcion añadirProductosCarrito que inserta el producto seleccionado al carrito
+        vistaProductosCarrito(carritoProductos);
     }
    
 });
@@ -21,8 +23,4 @@ $('.imgDltProd').click(eliminarProdCarrito);
  // evento que muestra u oculta el carrito cuando el usuario da click en el mismo
 $('#imagenCarrito').click(mostrarOcultarCarrito);
 
-// evento que al hacer click en el boton "agregar producto" ejecuta la funcion que añade el producto al carrito
-$('.btn').click(añadirProductosCarrito);
 
-// ejecuto un evento que cuando se ejecuta un click que llama la funcion añadirProductosCarrito que inserta el producto seleccionado al carrito
-vistaProductosCarrito(carritoProductos);

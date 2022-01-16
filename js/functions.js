@@ -15,6 +15,8 @@ function creadorDeProductos(productos, id) {
                                             </div>`);
         console.log(producto.tipo);
     }
+    // evento que al hacer click en el boton "agregar producto" ejecuta la funcion que añade el producto al carrito
+$('.btn').click(añadirProductosCarrito);
 }
 // funcion que agrega los productos al carrito
 function añadirProductosCarrito(e) {
@@ -148,13 +150,13 @@ function enviarCompra(e) {
     });
 }
 
-let tipoAutomovil = ($('select[id=tipoAutomovil]').value);
+// let tipoAutomovil = ($('select[id=tipoAutomovil]').value);
 
-$('#btnSendForm').click(function (e) {
-    e.preventDefault();
-        if (tipoAutomovil != "Todos") {
-            const filtros = productos.filter(p => p.tipo == tipoAutomovil);
-            creadorDeProductos(filtros);
-        }
-    }
-);
+// $('#btnSendForm').click(function (e) {
+//     e.preventDefault();
+//         if (tipoAutomovil != "Todos") {
+//             const filtros = productos.filter(p => p.tipo == tipoAutomovil);
+//             creadorDeProductos(filtros);
+//         }
+//     }
+// );

@@ -1,0 +1,177 @@
+.carrito{
+    padding: 50px 0;
+}
+    .carrito .contenedorCarrito .padreCarrito {
+        display: flex;
+        z-index: 10;
+        margin-top: 50px;
+    }
+        .carrito .contenedorCarrito .padreCajaCarrito .cajaComprar {
+            background: #fff;
+            border-top: 1px solid rgb(255, 255, 255);
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-around;
+        }
+            .carrito .contenedorCarrito .padreCajaCarrito .cajaComprar p {
+                color: #000;
+                font-size: 15px;
+                margin: 10px;
+            }
+                .carrito .contenedorCarrito .padreCajaCarrito .cajaComprar .cajaTotal, .carrito .contenedorCarrito .padreCajaCarrito .cajaComprar .cajaEnvio {
+                    display: flex;
+                    justify-content: space-between;
+                }
+                .carrito .contenedorCarrito .padreCajaCarrito .cajaComprar .cajaTotal {
+                    font-weight: 600;
+                }  
+                    .carrito .contenedorCarrito .padreCajaCarrito .cajaComprar a {
+                        text-decoration: none;
+                        display: grid;
+                        justify-content: end;
+                        margin-right: 10px;
+                    }
+                    .carrito .contenedorCarrito .padreCajaCarrito .cajaComprar .botones{
+                        display: flex;
+                        flex-flow: row wrap;
+                        justify-content: space-around;
+                    }
+                    .carrito .contenedorCarrito .padreCajaCarrito .cajaComprar .btncomprar {
+                        padding: 5px 10px;
+                        background: #0300D4;
+                        z-index: 10;
+                        font-size: 20px;
+                        color: #fff;
+                        outline: none;
+                        border: 1px solid #fff;
+                        cursor: pointer;
+                    }
+                        .carrito .contenedorCarrito .padreCajaCarrito .cajaComprar .btncomprar:hover {
+                            color: #0300D4;
+                            background: #fff;
+                            transition: 0.5s ease all;
+                            border: #0300D4 1px solid;
+                        }
+    .carrito .contenedorCarrito .cajaListasCarrito {
+        margin: 0;
+        z-index: 4;
+        padding-left: 0px;
+        background: #fff;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+        .carrito .contenedorCarrito .cajaListasCarrito::-webkit-scrollbar {
+            width: 9px;
+            background-color: #e7e7e7;
+        }
+        .carrito .contenedorCarrito .cajaListasCarrito::-webkit-scrollbar-thumb {
+            background-color: #858585;
+        }
+        .carrito .contenedorCarrito .cajaListasCarrito .listasCarrito {
+            background: #ffffff;
+            color: #000;
+            transition: ease all 0.5s;
+            list-style: none;
+            margin: 0;
+            padding: 5px 0px 5px 200px;
+            font-size: 15px;
+            display: flex;
+            width: 100%;
+            border-bottom: 1px solid #c2c2c2;
+        }
+            .carrito .contenedorCarrito .cajaListasCarrito .listasCarrito:hover {
+                transition: 0.5s ease all;
+                background-color: #0400d463;
+            }         
+            .carrito .contenedorCarrito .cajaListasCarrito .listasCarrito>p {
+                margin: 5px 0px;
+            }
+            .carrito .contenedorCarrito .cajaListasCarrito .listasCarrito .imagenCarrito {
+                width: 100%;
+                height: 100%;
+                max-height: 250px;
+                margin-right: 10px;
+                max-width: 250px;
+            }
+            .carrito .contenedorCarrito .cajaListasCarrito .listasCarrito .contenidoProducto {
+                display: flex;
+                flex-flow: column;
+                justify-content: space-around;
+                align-items: flex-start;
+                margin-left: 15px;
+                width: 50%;
+            }
+                .carrito .contenedorCarrito .cajaListasCarrito .listasCarrito .contenidoProducto .nombreEnCarrito {
+                    margin: 0;
+                    font-size: 17px;
+                    font-weight: bold;
+                }
+                .carrito .contenedorCarrito .cajaListasCarrito .listasCarrito .contenidoProducto .cantidadEnCarrito, .carrito .contenedorCarrito .cajaListasCarrito .listasCarrito .contenidoProducto .descripcionEnCarrito {
+                    margin: 0;
+                    font-size: 16px;
+                }    
+                .carrito .contenedorCarrito .cajaListasCarrito .listasCarrito .contenidoProducto .subtotalEnCarrito {
+                    margin: 0;
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+                .carrito .contenedorCarrito .cajaListasCarrito .listasCarrito .contenidoProducto .imgDltProd{
+                    margin-left: 0px;
+                    width: 20px;
+                }      
+                    .carrito .contenedorCarrito .cajaListasCarrito .listasCarrito .contenidoProducto .imgDltProd:hover{
+                        cursor: pointer;
+                    }
+            .carrito .contenedorCarrito .cajaListasCarrito .listasCarrito .datosContenidosProductos {
+                display: flex;
+                flex-flow: column;
+                justify-content: space-around;
+                align-items: flex-start;
+                margin-left: 15px;
+                width: 50%;
+            }
+                .carrito .contenedorCarrito .cajaListasCarrito .listasCarrito .datosContenidosProductos .cantidad{
+                    display: flex;
+                    flex-flow: row nowrap;
+                    align-items: center; 
+                }
+                /* input del carrito donde podes modificar la cantidad del producto */
+                input#datoCantidadProductos {
+                    width: 35px;
+                    height: 20px;
+                    margin-left: 5px;
+                    color: #000;
+                    padding-left: 5px !important;
+                }
+    /* elementos dinamicos que se ejecutan al dar click en boton finalizar compra */
+    .carrito .contenedorCarrito .compraExitosa{
+        padding: 20px;
+        display: grid;
+        margin: 30px auto;
+        color: #ffffff;
+        background-color: #0400d4ad;
+        font-size: 25px;
+        justify-content: center;
+    }
+        .carrito .contenedorCarrito a{
+            text-decoration: none;
+        }
+        .carrito .contenedorCarrito .comprar{
+            margin: 5px auto;
+            display: grid;
+            padding: 5px 10px;
+            background: #0300D4;
+            font-size: 30px;
+            border-radius: 10px;
+            color: #fff;
+            outline: none;
+            border: 1px solid #fff;
+            cursor: pointer;
+        }
+            .carrito .contenedorCarrito .comprar:hover {
+                color: #0300D4;
+                background: #fff;
+                transition: 0.5s ease all;
+                border: #0300D4 1px solid;
+            }

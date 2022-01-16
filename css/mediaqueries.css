@@ -1,0 +1,30 @@
+/* responsive */
+@media screen and (min-width: 1100px) {
+    .seccionCatalogo .text {
+        padding-top: 30px;
+    }
+}
+@media screen and (min-width: 1400px) {
+    .seccionCatalogo {
+        padding-top: 100px;
+    }
+    .sidebar {
+        padding-top: 100px;
+    }
+}
+@media screen and (min-width: 1600px) {
+    .seccionCatalogo {
+        padding-top: 200px;
+    }
+    .sidebar {
+        padding-top: 200px;
+    }
+}
+@media screen and (min-width: 1800px) {
+    .seccionCatalogo {
+        padding-top: 300px;
+    }
+    .sidebar{
+        padding-top: 300px;
+    }
+}

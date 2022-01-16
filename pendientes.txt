@@ -1,0 +1,21 @@
+<!--Pendientes:
+HTML:
+    -Agregar seccion de quienesSomos con lorem itsum de la empresa
+    -Mejorar el footer, agregarle menu y datos lorem itsum de contacto, etc
+CSS:
+    -Cambiar colores de la web en general
+    -mejorar estilos del carrito en index.html 
+    -mejorar estilos del carrito grande en procesamientoCompras.html
+JS: 
+    -generar funciones y eventos para los filtros del sidebar
+    -generar funcion que calcule y muestre el precio total del pedido en el carrito
+    -Ejecutar evento que al agregar un producto al carrito le diga al usuario en un mensaje insertado en el html que el producto fue insertado correctamente
+    -generar funcion que calcule el precio del subtotal segun la cantidad del producto que selecciono el usuario en el input del carrito (por ahora el carrito de procesamientoCompras.html)
+-->
+
+
+// funciones para el formulario
+// $('#btnSendForm').click(function(){
+//     let hola = ($('select[id=tipoAutomovil]').val());
+//     console.log(hola);
+// });

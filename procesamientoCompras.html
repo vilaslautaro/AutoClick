@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/compras.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Autoclick Compras</title>
+</head>
+<body>
+    <body id="body">
+        <!-- layout -->
+        <div class="grid">
+            <!-- header -->
+            <header class="header">
+                <div id="contenedor" class="contenedor">
+                    <div class="menus">
+                        <nav id="logo" class="logo">
+                            <div>
+                                <a href="#"><img src="img/logo.png" alt="ecommerce" height="30px"></a>
+                            </div>
+                        </nav>
+                        <nav id="menu" class="menu">
+                            <a href="">Inicio</a>
+                            <a href="">Autos</a>
+                            <a href="">Camionetas</a>
+                            <a href="">Contacto</a>
+                        </nav>
+                        <div id="contenedorCarrito" class="contenedorCarrito">
+                            <img title="Carrito" src="img/carritoicono.png" id="imagenCarrito" alt="" width="30px"
+                                height="30px">
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <!-- Carrito procesamiento compra -->
+        <div class="carrito">
+            <div id="contenedorDivCarrito" class="contenedorCarrito">
+                <div id="padreCajaCarrito" class="padreCajaCarrito">
+                    <ul id="cajaCarrito" class="cajaListasCarrito">
+                        <!-- En este espacio es donde se generan los productos que agrega el usuario al carrito -->
+                    </ul>
+                    <div id="cajaComprar" class="cajaComprar">
+                        <div class="cajaTotal">
+                            <p>Total </p>
+                            <p>$</p>
+                        </div>
+                        <div class="cajaEnvio">
+                            <p>Envio</p>
+                            <p>Gratis</p>
+                        </div>
+                        <div class="botones">
+                            <a href="index.html"><button id="btnRegresar" class="btncomprar">Regresar a la tienda</button></a>
+                            <button id="finalizarCompra" class="btncomprar">Finalizar compra</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="copyright">
+                <p class="copyuno">Todos los derechos reservados 2021</p>
+                <p class="copydos">Sitio realizado por <a href="#">Lautaro Vilas</a></p>
+            </div>
+        </footer>
+        <!-- Jquery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- Javascript -->
+        <script src="js/globales.js"></script>
+        <script src="js/functions.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/class.js"></script>
+    </body>
+</html>

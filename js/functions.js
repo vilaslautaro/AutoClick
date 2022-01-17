@@ -159,26 +159,38 @@ function enviarCompra(e) {
 
 
 // }
-
-$('#btnSendForm').click(function aplicarFiltros(e) {
+// evento que al hacer click el boton "Aplicar Filtros" ejecuta una funcion
+$('#btnSendForm').click(function (e) {
     e.preventDefault();
-    let tipoAutomovil = $('#tipoAutomovil').val();
+    // input de busqueda
     let inputSearch = $('#searchForm').val().toUpperCase();
+    // input de seleccion de tipo de automovil (auto o camioneta, o todos)
+    let tipoAutomovil = $('#tipoAutomovil').val();
+    // seleccion de checkbox de marcas de auto
     let casillas = $(".marcasForm:checked");
     console.log(casillas);
-    if (casillas.length <= 0) {
+    // input de precio minimos y/o maximos de los productos
+    let precioForm = $('.precioForm').val();
+    // if con condicionales de ejecucion si el usuario uso al menos 1 o mas de los filtros
+    if (inputSearch != "" || tipoAutomovil != "todos" ||casillas.length <= 0) {
+        // for que recorre el array de los objetos checkbox marcados y trae el valor
         for (let chequeados of casillas) {
             let valorCheck = chequeados.value;
             console.log(chequeados);
             console.log(valorCheck);
+            // metodo que filtra y trae los productos que cumplen las condiciones del filtro
             let filtros = productos.filter(p => (p.nombre.includes(inputSearch)) || (p.tipo == tipoAutomovil) || (p.nombre == valorCheck));
             console.log(filtros);
+            // vaciamos la seccion de productos
             $('#seccionProductos').empty();
+            // creamos los productos filtrados
             creadorDeProductos(filtros);
+            // si no encontramos ningun producto que cumpla las condiciones del filtro se ejecuta este if con mensaje para el usuario
             if (filtros.length <= 0) {
                 $('#seccionProductos').html('<h3>Lo sentimos no encontramos ningun producto con esas caracteristicas</h3>');
             }
         }
+        // si el usuario hace click pero no usa ningun filtro, mostramos los productos sin filtros
     } else {
         $('#seccionProductos').empty();
         creadorDeProductos(productos);

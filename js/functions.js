@@ -148,7 +148,7 @@ function enviarCompra(e) {
     });
 }
 
-
+// estructura para generar el precio total del carrito
 // let carritoPrecio = carritoProductos.map(p => p.precio == this.value);
 // console.log(carritoPrecio);
 // function calcularTotal() {
@@ -156,9 +156,10 @@ function enviarCompra(e) {
 //     return carrito.precio.reduce((acc, numero) => acc + numero);
 //     }
 // }
-
-
 // }
+
+
+
 // evento que al hacer click el boton "Aplicar Filtros" ejecuta una funcion
 $('#btnSendForm').click(function (e) {
     e.preventDefault();

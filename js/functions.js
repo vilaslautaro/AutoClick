@@ -2,7 +2,7 @@
 // funcion que crea los productos en el DOM
 function creadorDeProductos(productos, id) {
     $(id).empty();
-    for (const producto of productos) {
+    for (let producto of productos) {
         // cargamos de contenido el nuevo elemento
         $('#seccionProductos').append(` <div class="cajaProducto">
                                                 <img class="imagenProducto" src="${producto.imagen}" alt="">
@@ -13,10 +13,9 @@ function creadorDeProductos(productos, id) {
                                                 </div>
                                                 <button id="${producto.id}" class="btn">Agregar al carrito</button>
                                             </div>`);
-        console.log(producto.tipo);
     }
     // evento que al hacer click en el boton "agregar producto" ejecuta la funcion que añade el producto al carrito
-$('.btn').click(añadirProductosCarrito);
+    $('.btn').click(añadirProductosCarrito);
 }
 // funcion que agrega los productos al carrito
 function añadirProductosCarrito(e) {
@@ -52,7 +51,6 @@ function vistaProductosCarrito(lista) {
     for (const listaproductos of lista) {
         $('#cajaCarrito').append(procesamientoCarrito(listaproductos));
     }
-
     // evento que envia la compra con el metodo .post (boton finalizar compra de procesamientoCompras.html)
     $("#finalizarCompra").click(enviarCompra);
 }
@@ -150,13 +148,40 @@ function enviarCompra(e) {
     });
 }
 
-// let tipoAutomovil = ($('select[id=tipoAutomovil]').value);
 
-// $('#btnSendForm').click(function (e) {
-//     e.preventDefault();
-//         if (tipoAutomovil != "Todos") {
-//             const filtros = productos.filter(p => p.tipo == tipoAutomovil);
-//             creadorDeProductos(filtros);
-//         }
+// let carritoPrecio = carritoProductos.map(p => p.precio == this.value);
+// console.log(carritoPrecio);
+// function calcularTotal() {
+// for (let carrito of carritoProductos){
+//     return carrito.precio.reduce((acc, numero) => acc + numero);
 //     }
-// );
+// }
+
+
+// }
+
+$('#btnSendForm').click(function aplicarFiltros(e) {
+    e.preventDefault();
+    let tipoAutomovil = $('#tipoAutomovil').val();
+    let inputSearch = $('#searchForm').val().toUpperCase();
+    let casillas = $(".marcasForm:checked");
+    console.log(casillas);
+    if (casillas.length <= 0) {
+        for (let chequeados of casillas) {
+            let valorCheck = chequeados.value;
+            console.log(chequeados);
+            console.log(valorCheck);
+            let filtros = productos.filter(p => (p.nombre.includes(inputSearch)) || (p.tipo == tipoAutomovil) || (p.nombre == valorCheck));
+            console.log(filtros);
+            $('#seccionProductos').empty();
+            creadorDeProductos(filtros);
+            if (filtros.length <= 0) {
+                $('#seccionProductos').html('<h3>Lo sentimos no encontramos ningun producto con esas caracteristicas</h3>');
+            }
+        }
+    } else {
+        $('#seccionProductos').empty();
+        creadorDeProductos(productos);
+    }
+}
+);

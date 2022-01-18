@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/mediaqueries.css">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
@@ -14,6 +15,7 @@
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <title>Autoclick</title>
 </head>
+
 <body id="body">
     <!-- layout -->
     <div class="grid">
@@ -30,7 +32,7 @@
                         <a href="">Inicio</a>
                         <a href="">Autos</a>
                         <a href="">Camionetas</a>
-                        <a href="">Contacto</a>
+                        <a href="/contacto.html" target="_blank">Contacto</a>
                     </nav>
                     <div id="contenedorCarrito" class="contenedorCarrito"><img title="Carrito"
                             src="img/carritoicono.png" id="imagenCarrito" alt="" width="30px" height="30px"><span
@@ -72,8 +74,6 @@
             </div>
             <div id="seccionProductos" class="seccionProductos">
                 <!-- Aca insertamos los productos dinamicamente -->
-                <!-- <p id="productoAgregado" class="productoAgregado">Su producto ha sido agregado correctamente al carrito
-                </p> -->
             </div>
         </section>
         <!-- sidebar -->
@@ -82,7 +82,7 @@
                 <!-- formulario -->
                 <form action="#" id="form" class="formulario" name="formFiltros" method="post">
                     <!-- boton de remover filtros -->
-                    <input type="reset" id="btnRemoveFilt" class="btnRemoveFilt" value="Quitar filtros">
+                    <input type="reset" id="btnRemoveFilt" class="btnForm btnRemoveFilt" value="Quitar filtros">
                     <!-- caja de busqueda -->
                     <p class="textosForm">Busqueda</p>
                     <input type="search" class="searchForm" id="searchForm" maxlength="50" placeholder="Camaro">
@@ -96,24 +96,28 @@
                     <!-- input checkbox de seleccion segun marca -->
                     <p class="textosForm">Marcas</p>
                     <label for="audi"><input class="marcasForm" id="audi" value="AUDI" type="Checkbox">Audi</label><br>
-                    <label for="benz"><input class="marcasForm" id="benz" value="MERCEDES BENZ" type="Checkbox">Mercedes Benz</label><br>
-                    <label for="chev"><input class="marcasForm" id="chev" value="CHEVROLET" type="Checkbox">Chevrolet</label><br>
+                    <label for="benz"><input class="marcasForm" id="benz" value="MERCEDES BENZ" type="Checkbox">Mercedes
+                        Benz</label><br>
+                    <label for="chev"><input class="marcasForm" id="chev" value="CHEVROLET"
+                            type="Checkbox">Chevrolet</label><br>
                     <label for="ford"><input class="marcasForm" id="ford" value="FORD" type="Checkbox">Ford</label><br>
-                    <label for="honda"><input class="marcasForm"id="honda" value="HONDA"  type="Checkbox">Honda</label><br>
+                    <label for="honda"><input class="marcasForm" id="honda" value="HONDA"
+                            type="Checkbox">Honda</label><br>
                     <label for="bmw"><input class="marcasForm" id="bmw" value="BMW" type="Checkbox">Bmw</label><br>
                     <!-- input de numeros de mostrar segun el precio -->
                     <p class="textosForm">Precio</p>
                     <div class="cajaSubtextos">
-                            <label for="">
+                        <label for="">
                             <p class="subtextosForm">Min</p>
                             <input type="number" class="precioForm" placeholder="20000" min="0" max="199999">
-                        </label> 
+                        </label>
                         <label for="">
-                        <p class="subtextosForm">Max</p>
-                        <input type="number" class="precioForm" placeholder="100000" max="200000" min="1">
-                    </label></div><br>
+                            <p class="subtextosForm">Max</p>
+                            <input type="number" class="precioForm" placeholder="100000" max="200000" min="1">
+                        </label>
+                    </div><br>
                     <!-- boton de aplicar filtros -->
-                    <input type="submit" id="btnSendForm" class="btnSendForm" value="Aplicar filtros">
+                    <input type="submit" id="btnSendForm" class="btnForm btnSendForm" value="Aplicar filtros">
                 </form>
             </div>
         </div>
@@ -121,7 +125,8 @@
         <footer class="footer">
             <div class="copyright">
                 <p class="copyuno">Todos los derechos reservados por 2021</p>
-                <p class="copydos">Sitio realizado por <a href="https://www.linkedin.com/in/lautarovilas/">Lautaro Vilas</a></p>
+                <p class="copydos">Sitio realizado por <a href="https://www.linkedin.com/in/lautarovilas/">Lautaro
+                        Vilas</a></p>
             </div>
         </footer>
     </div>
@@ -133,4 +138,12 @@
     <script src="js/main.js"></script>
     <script src="js/class.js"></script>
 </body>
+
+</html>
+
+
+
+
+</body>
+
 </html>

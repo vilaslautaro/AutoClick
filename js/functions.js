@@ -12,6 +12,7 @@ function creadorDeProductos(productos, id) {
                                                     <p class="precio">USD ${producto.precio}</p>
                                                 </div>
                                                 <button id="${producto.id}" class="btn">Agregar al carrito</button>
+                                                <span id="productoAgregado" class="productoAgregado">Su producto ha sido agregado correctamente al carrito</span>
                                             </div>`);
     }
     // evento que al hacer click en el boton "agregar producto" ejecuta la funcion que añade el producto al carrito
@@ -29,10 +30,13 @@ function añadirProductosCarrito(e) {
         const buscadorId = productos.find(producto => producto.id == idProducto);
         // añado el producto seleccionado al carrito
         carritoProductos.push(buscadorId);
-    } else {
+        $('#productoAgregado').show(1000).delay(2000).hide(1000);
+    } else if(buscarProductoEnCarrito) {
         // Si ya se encuentra el producto en el carrito, le agregamos cantidad llamando al metodo agregarCantidadEnCarrito
         buscarProductoEnCarrito.agregarCantidadEnCarrito(1);
+        $('#productoAgregado').show(1000).delay(2000).hide(1000);
     }
+
     // guardamos los productos que tenemos/teniamos en el carrito una vez que el DOM ya se cargo completamente
     localStorage.setItem('carritoCargado', JSON.stringify(carritoProductos));
     // Agregamos el producto al carrito
@@ -51,6 +55,8 @@ function vistaProductosCarrito(lista) {
     for (const listaproductos of lista) {
         $('#cajaCarrito').append(procesamientoCarrito(listaproductos));
     }
+    // evento que elimina el producto del carrito
+    $('.imgDltProd').click(eliminarProdCarrito);
     // evento que envia la compra con el metodo .post (boton finalizar compra de procesamientoCompras.html)
     $("#finalizarCompra").click(enviarCompra);
 }

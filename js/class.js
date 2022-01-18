@@ -18,7 +18,6 @@ class Productos {
         return parseInt(this.cantidadEnCarrito * this.precio);
     }
 }
-
 // AJAX
 // cargamos los productos por medio de un archivo .json
 $.get("data/productos.json", function (respuesta, estado) {

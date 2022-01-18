@@ -112,6 +112,17 @@
                         }
                 .seccionCatalogo .seccionProductos .productoAgregado {
                     display: none;
+                    right: 0px;
+                    left: 750px;
+                    bottom: 40px;
+                    position: fixed;
+                    padding: 10px;
+                    color: #0400ff;
+                    background: #fff;
+                    font-size: 22px;
+                    opacity: 0.95;
+                    border-radius: 33px 0px 0px 33px;
+                    border: 2px solid #0400ff;
                 }
         /* sidebar */
         .sidebar{
@@ -138,20 +149,20 @@
                 .sidebar .filtros .formulario .marcasForm{
                     margin: 7px 5px;    
                 }
-                .sidebar .filtros .formulario .btn{
+                .sidebar .filtros .formulario .btnForm{
                     background: #0300D4;
                     color: #fff;
                     border: 1px solid rgba(221, 221, 221, 0);
                     padding: 5px 10px;
                     border-radius: 10px;
-                    margin-left: 90px;
+                    
                 }
-                    .sidebar .filtros .formulario .btn:hover{
+                    .sidebar .filtros .formulario .btnForm:hover{
                         background: #ddd;
                         color: #0300D4;
                         border: 1px solid #0300D4;
                         cursor: pointer;   
                     }
-                .sidebar .filtros .formulario .sendForm{
+                .sidebar .filtros .formulario .btnSendForm{
                     margin-top: 25px;
                 }

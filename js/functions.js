@@ -113,10 +113,10 @@ function mostrarOcultarCarrito(e) {
         $('.listasCarrito').addClass("carrito-mostrar");
         $('#btnCarrito').css({
             overflowY: "scroll",
-            opacity: "1"
+            display: "flex"
         });
         $('#cajaBtnComprar').css({
-            opacity: "1"
+            display: "flex"
         });
     } else if ($('#padreCarrito').hasClass('mostrar') == true) {
         $('.padreCarrito').removeClass("mostrar");
@@ -124,10 +124,10 @@ function mostrarOcultarCarrito(e) {
         $('.listasCarrito').removeClass("carrito-mostrar");
         $('.listasCarrito').addClass("carrito-footer");
         $('#btnCarrito').css({
-            opacity: "0"
+            display: "none"
         });
         $('#cajaBtnComprar').css({
-            opacity: "0"
+            display: "none"
         });
     }
 }

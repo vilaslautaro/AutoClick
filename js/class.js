@@ -3,7 +3,7 @@ class Productos {
     constructor(id, nombre, descripcion, precio, imagen, cantidadEnCarrito, tipo) {
         this.id = parseInt(id);
         this.nombre = nombre;
-        this.descripcion = descripcion;
+        this.descripcion = descripcion.toUpperCase();
         this.precio = parseInt(precio);
         this.imagen = imagen;
         this.cantidadEnCarrito = parseFloat(cantidadEnCarrito || 1);

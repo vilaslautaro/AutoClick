@@ -170,9 +170,8 @@ function enviarCompra(e) {
 // - como hago para que funcione si el usuario utiliza varios filtros
 // - el filtroMarcas() no funciona si selecciona 2 o más marcas.
 
-
 // evento que al hacer click el boton "Aplicar Filtros" ejecuta una funcion
-$('#btnSendForm').click(filtroSearch);
+$('#btnSendForm').click(filtrando);
 
 let filtros;
 function filtroSearch(e, filtros) {
@@ -269,8 +268,8 @@ function filtroPrecio(filtros) {
 }
 
 function filtroErrores() {
-        $('#seccionProductos').empty();
-        creadorDeProductos(productos);
+    $('#seccionProductos').empty();
+    creadorDeProductos(productos);
 }
 
 

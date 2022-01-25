@@ -1,12 +1,110 @@
-[{"id":1,"nombre":"BMW","precio":92480,"descripcion":"M340i","imagen":"https://s.aolcdn.com/commerce/autodata/images/USD00BMC891A021001.jpg","cantidadEnCarrito":1, "tipo":"auto"},
-{"id":2,"nombre":"MERCEDES BENZ","precio":40180,"descripcion":"AMG","imagen":"https://assets.meinauto.de/image/upload/f_auto/q_auto:eco/c_scale,w_auto/v1/prod//mercedes/amggt/1/2roadster/mercedes_18amggtroadsterrs1e_angularfront.png","cantidadEnCarrito":1, "tipo":"auto"},
-{"id":3,"nombre":"HONDA","precio":119423,"descripcion":"Acura NSX","imagen":"https://s3.amazonaws.com/di-enrollment-api/acura/2018-acura-nsx/model-image-2018-acura-nsx.png","cantidadEnCarrito":1, "tipo":"auto"},
-{"id":4,"nombre":"FORD","precio":63603,"descripcion":"Mustang","imagen":"https://www.megautos.com/wp-content/uploads/2021/05/Mustang-Mach-1-blanco-1024x669.jpg","cantidadEnCarrito":1, "tipo":"auto"},
-{"id":5,"nombre":"CHEVROLET","precio":173771,"descripcion":"Camaro","imagen":"https://us.123rf.com/450wm/zamollxis/zamollxis1802/zamollxis180201129/95412377-coche-deportivo-negro-aislado-sobre-fondo-blanco-.jpg?ver=6","cantidadEnCarrito":1, "tipo":"auto"},
-{"id":6,"nombre":"AUDI","precio":43349,"descripcion":"TT","imagen":"https://cars.usnews.com/static/images/Auto/izmo/302470/2009_audi_tt_angularfront.jpg","cantidadEnCarrito":1, "tipo":"auto"},
-{"id":7,"nombre":"MERCEDES BENZ","precio":119084,"descripcion":"GLE Coupe","imagen":"https://www.andiani.es/2018/wp-content/uploads/2020/01/Imagen-7.png","cantidadEnCarrito":1, "tipo":"camioneta"},
-{"id":8,"nombre":"HONDA","precio":24494,"descripcion":"CRV","imagen":"https://www.autodato.com/wp-content/uploads/2012/03/honda_crv_2012-67.jpg","cantidadEnCarrito":1, "tipo":"camioneta"},
-{"id":9,"nombre":"AUDI","precio":199263,"descripcion":"Q3","imagen":"https://www.kindpng.com/picc/m/70-700088_car-transparent-png-pictures-audi-q3-2020-white.png","cantidadEnCarrito":1, "tipo":"camioneta"},
-{"id":10,"nombre":"FORD","precio":150029,"descripcion":"Ranger Raptor","imagen":"https://p4.wallpaperbetter.com/wallpaper/733/143/597/f-150-ford-truck-svt-raptor-wallpaper-preview.jpg","cantidadEnCarrito":1, "tipo":"camioneta"},
-{"id":11,"nombre":"CHEVROLET","precio":150029,"descripcion":"Brazer","imagen":"https://www.autoasesor.com/chevrolet/imagenes/blazer19.jpg","cantidadEnCarrito":1, "tipo":"camioneta"},
-{"id":12,"nombre":"BMW","precio":150029,"descripcion":"X4","imagen":"https://acroadtrip.blob.core.windows.net/catalogo-imagenes/m/RT_V_a4edf3b54bbb4844aa14e47fcc919177.jpg","cantidadEnCarrito":1, "tipo":"camioneta"}]
+[
+    {
+        "id": 1,
+        "nombre": "BMW",
+        "precio": 92480,
+        "descripcion": "M340i",
+        "imagen": "https://s.aolcdn.com/commerce/autodata/images/USD00BMC891A021001.jpg",
+        "cantidadEnCarrito": 1,
+        "tipo": "auto"
+    },
+    {
+        "id": 2,
+        "nombre": "MERCEDES BENZ",
+        "precio": 40180,
+        "descripcion": "AMG",
+        "imagen": "https://assets.meinauto.de/image/upload/f_auto/q_auto:eco/c_scale,w_auto/v1/prod//mercedes/amggt/1/2roadster/mercedes_18amggtroadsterrs1e_angularfront.png",
+        "cantidadEnCarrito": 1,
+        "tipo": "auto"
+    },
+    {
+        "id": 3,
+        "nombre": "HONDA",
+        "precio": 119423,
+        "descripcion": "Acura NSX",
+        "imagen": "https://s3.amazonaws.com/di-enrollment-api/acura/2018-acura-nsx/model-image-2018-acura-nsx.png",
+        "cantidadEnCarrito": 1,
+        "tipo": "auto"
+    },
+    {
+        "id": 4,
+        "nombre": "FORD",
+        "precio": 63603,
+        "descripcion": "Mustang",
+        "imagen": "https://www.megautos.com/wp-content/uploads/2021/05/Mustang-Mach-1-blanco-1024x669.jpg",
+        "cantidadEnCarrito": 1,
+        "tipo": "auto"
+    },
+    {
+        "id": 5,
+        "nombre": "CHEVROLET",
+        "precio": 173771,
+        "descripcion": "Camaro",
+        "imagen": "https://us.123rf.com/450wm/zamollxis/zamollxis1802/zamollxis180201129/95412377-coche-deportivo-negro-aislado-sobre-fondo-blanco-.jpg?ver=6",
+        "cantidadEnCarrito": 1,
+        "tipo": "auto"
+    },
+    {
+        "id": 6,
+        "nombre": "AUDI",
+        "precio": 43349,
+        "descripcion": "TT",
+        "imagen": "https://cars.usnews.com/static/images/Auto/izmo/302470/2009_audi_tt_angularfront.jpg",
+        "cantidadEnCarrito": 1,
+        "tipo": "auto"
+    },
+    {
+        "id": 7,
+        "nombre": "MERCEDES BENZ",
+        "precio": 119084,
+        "descripcion": "GLE Coupe",
+        "imagen": "https://www.andiani.es/2018/wp-content/uploads/2020/01/Imagen-7.png",
+        "cantidadEnCarrito": 1,
+        "tipo": "camioneta"
+    },
+    {
+        "id": 8,
+        "nombre": "HONDA",
+        "precio": 24494,
+        "descripcion": "CRV",
+        "imagen": "https://www.autodato.com/wp-content/uploads/2012/03/honda_crv_2012-67.jpg",
+        "cantidadEnCarrito": 1,
+        "tipo": "camioneta"
+    },
+    {
+        "id": 9,
+        "nombre": "AUDI",
+        "precio": 199263,
+        "descripcion": "Q3",
+        "imagen": "https://www.kindpng.com/picc/m/70-700088_car-transparent-png-pictures-audi-q3-2020-white.png",
+        "cantidadEnCarrito": 1,
+        "tipo": "camioneta"
+    },
+    {
+        "id": 10,
+        "nombre": "FORD",
+        "precio": 150029,
+        "descripcion": "Ranger Raptor",
+        "imagen": "https://p4.wallpaperbetter.com/wallpaper/733/143/597/f-150-ford-truck-svt-raptor-wallpaper-preview.jpg",
+        "cantidadEnCarrito": 1,
+        "tipo": "camioneta"
+    },
+    {
+        "id": 11,
+        "nombre": "CHEVROLET",
+        "precio": 150029,
+        "descripcion": "Brazer",
+        "imagen": "https://www.autoasesor.com/chevrolet/imagenes/blazer19.jpg",
+        "cantidadEnCarrito": 1,
+        "tipo": "camioneta"
+    },
+    {
+        "id": 12,
+        "nombre": "BMW",
+        "precio": 150029,
+        "descripcion": "X4",
+        "imagen": "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/m/RT_V_a4edf3b54bbb4844aa14e47fcc919177.jpg",
+        "cantidadEnCarrito": 1,
+        "tipo": "camioneta"
+    }
+]

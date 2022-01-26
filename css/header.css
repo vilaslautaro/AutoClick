@@ -196,6 +196,8 @@ body {
                             font-size: 15px;
                             margin: 10px;
                         }
+
+
                         header .contenedor .menus .contenedorCarrito .padreCarrito .cajaBtnComprar .total, header .contenedor .menus .contenedorCarrito .padreCarrito .cajaBtnComprar .envio {
                             display: flex;
                             justify-content: space-between;
@@ -203,6 +205,10 @@ body {
                         header .contenedor .menus .contenedorCarrito .padreCarrito .cajaBtnComprar .total {
                             font-weight: 600;
                         }
+                        header .contenedor .menus .contenedorCarrito .padreCarrito .cajaBtnComprar .total .precioTotal{
+                            font-size: 20px;
+                        }
+
                         header .contenedor .menus .contenedorCarrito .padreCarrito .cajaBtnComprar a {
                             text-decoration: none;
                             display: grid;

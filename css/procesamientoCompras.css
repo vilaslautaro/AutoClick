@@ -25,6 +25,10 @@
                 .carrito .contenedorCarrito .padreCajaCarrito .cajaComprar .cajaTotal {
                     font-weight: 600;
                 }  
+
+                .carrito .contenedorCarrito .padreCajaCarrito .cajaComprar .cajaTotal .precioCompra{
+                    font-size: 20px;
+                }  
                     .carrito .contenedorCarrito .padreCajaCarrito .cajaComprar a {
                         text-decoration: none;
                         display: grid;

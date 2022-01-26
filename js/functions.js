@@ -30,11 +30,11 @@ function añadirProductosCarrito(e) {
         const buscadorId = productos.find(producto => producto.id == idProducto);
         // añado el producto seleccionado al carrito
         carritoProductos.push(buscadorId);
-        $('#productoAgregado').show(1000).delay(2000).hide(1000);
+        $('#productoAgregado').show(500).delay(1500).hide(500);
     } else if (buscarProductoEnCarrito) {
         // Si ya se encuentra el producto en el carrito, le agregamos cantidad llamando al metodo agregarCantidadEnCarrito
         buscarProductoEnCarrito.agregarCantidadEnCarrito(1);
-        $('#productoAgregado').show(1000).delay(2000).hide(1000);
+        $('#productoAgregado').show(500).delay(1500).hide(500);
     }
 
     // guardamos los productos que tenemos/teniamos en el carrito una vez que el DOM ya se cargo completamente
@@ -52,9 +52,12 @@ function vistaProductosCarrito(lista) {
         // llamo al carrito y le agrego como nodo hijo los nuevos productos seleccionados
         $('#btnCarrito').append(contenidoCarrito(productoslista));
     }
+    // carrito de procesamientoCompras.html
     for (const listaproductos of lista) {
         $('#cajaCarrito').append(procesamientoCarrito(listaproductos));
     }
+    // inserto el precio total en el carrito
+    $('#insertTotal').html(`USD ${calcularPrecioTotal()}`);
     // evento que elimina el producto del carrito
     $('.imgDltProd').click(eliminarProdCarrito);
     // evento que envia la compra con el metodo .post (boton finalizar compra de procesamientoCompras.html)
@@ -154,122 +157,69 @@ function enviarCompra(e) {
     });
 }
 
-// estructura para generar el precio total del carrito
-// let carritoPrecio = carritoProductos.map(p => p.precio == this.value);
-// console.log(carritoPrecio);
-// function calcularTotal() {
-// for (let carrito of carritoProductos){
-//     return carrito.precio.reduce((acc, numero) => acc + numero);
-//     }
-// }
-// }
+// funcion que calcula el precio total del carrito segun los productos que esten en el mismo
+function calcularPrecioTotal() {
+    // con el metodo map, extraemos el precio de los productos en el carrito y los guardamos en un array
+    let arrayPrecios = carritoProductos.map(p => p.precio);
+    // con el metodo reduce, sumamos todos los precios que quedaron guardados en el arrayPrecios asi nos da el total
+    let total = arrayPrecios.reduce((a, b) => a + b);
+    return total;
+}
 
+// evento que ejecuta los filtros
+$('#btnSendForm').click(botonFiltros);
 
-// FUNCIONES DE ------------FILTROS-------------------
-// // 2 problemas:
-// - como hago para que funcione si el usuario utiliza varios filtros
-// - el filtroMarcas() no funciona si selecciona 2 o más marcas.
-
-// evento que al hacer click el boton "Aplicar Filtros" ejecuta una funcion
-$('#btnSendForm').click(filtrando);
-
-let filtros;
-function filtroSearch(e, filtros) {
+// funcion para ejecutar los filtros
+function botonFiltros(e) {
     e.preventDefault();
-    // input de busqueda
+    // traemos y guardamos en variables cada input, select y los input checked del formulario
     let inputSearch = $('#searchForm').val().toUpperCase();
-    // if con condicionales de ejecucion si el usuario uso al menos 1 o mas de los filtros
-    if (inputSearch != "") {
-        // metodo que filtra y trae los productos que cumplen las condiciones del filtro
-        filtros = productos.filter(p => (p.nombre.includes(inputSearch) || (p.descripcion.includes(inputSearch))));
-        console.log(filtros);
-        // vaciamos la seccion de productos
-        $('#seccionProductos').empty();
-        // creamos los productos filtrados
-        creadorDeProductos(filtros);
-        // si no encontramos ningun producto que cumpla las condiciones del filtro se ejecuta este if con mensaje para el usuario
-        if (filtros.length <= 0) {
-            $('#seccionProductos').html('<h3>Lo sentimos no encontramos ningun producto con esas caracteristicas</h3>');
-        }
-    } else {
-        filtroTipo();
-    }
-}
-
-
-function filtroTipo(filtros) {
-    // input de seleccion de tipo de automovil (auto o camioneta, o todos)
     let tipoAutomovil = $('#tipoAutomovil').val();
-    if (tipoAutomovil == "auto" || tipoAutomovil == "camioneta") {
-        // metodo que filtra y trae los productos que cumplen las condiciones del filtro
-        filtros = productos.filter(p => (p.tipo == tipoAutomovil));
-        console.log(filtros);
-        // vaciamos la seccion de productos
-        $('#seccionProductos').empty();
-        // creamos los productos filtrados
-        creadorDeProductos(filtros);
-        // si no encontramos ningun producto que cumpla las condiciones del filtro se ejecuta este if con mensaje para el usuario
-        if (filtros.length <= 0) {
-            $('#seccionProductos').html('<h3>Lo sentimos no encontramos ningun producto con esas caracteristicas</h3>');
-        }
-    } else {
-        filtroMarcas();
-    }
-}
-
-function filtroMarcas(filtros) {
-    // seleccion de checkbox de marcas de auto
     let casillas = $(".marcasForm:checked");
     let valorCheck = [];
-    if (casillas.length != 0) {
-        // for que recorre el array de los objetos checkbox marcados y trae el valor
-        for (let chequeados of casillas) {
-            valorCheck.push(chequeados.value);
-            console.log(chequeados);
-            console.log(valorCheck);
-            //metodo que filtra y trae los productos que cumplen las condiciones del filtro
-            filtros = productos.filter(p => (p.nombre == valorCheck));
-            console.log(filtros);
-            // vaciamos la seccion de productos
-            $('#seccionProductos').empty();
-            // creamos los productos filtrados
-            creadorDeProductos(filtros);
-            if (filtros.length <= 0) {
-                $('#seccionProductos').html('<h3>Lo sentimos no encontramos ningun producto con esas caracteristicas</h3>');
-            }
-        }
-    } else {
-        filtroPrecio();
-    }
-}
-
-function filtroPrecio(filtros) {
-    // input de precio minimos y/o maximos de los productos
     let precioMin = $('#precioMin').val();
     let precioMax = $('#precioMax').val();
-    console.log(precioMin);
-    console.log(precioMax);
-    if (precioMin != 0 || precioMax != 0) {
-        // metodo que filtra y trae los productos que cumplen las condiciones del filtro
-        filtros = productos.filter(p => (p.precio >= precioMin && p.precio <= precioMax));
-        console.log(filtros);
+
+    // for que recorre el array de los objetos checkbox marcados y trae el valor
+    for (let chequeados of casillas) {
+        valorCheck.push(chequeados.value);
+    }
+
+    let filtrados = productos;
+// le decimos que si el usuario ingreso algun filtro, ingrese y ejecute segun el/los que haya usado.
+    if (inputSearch != "" || (tipoAutomovil == "auto" || tipoAutomovil == "camioneta") || casillas.length != 0 || (precioMin != "" || precioMax != "")) {
+
+        if (inputSearch != "") {
+            filtrados = filtrados.filter(p => (p.nombre.includes(inputSearch) || p.descripcion.includes(inputSearch)));
+        }
+
+        if (tipoAutomovil == "auto" || tipoAutomovil == "camioneta") {
+            filtrados = filtrados.filter(p => (p.tipo == tipoAutomovil));
+        };
+
+        if (valorCheck.length > 0) {
+            filtrados = filtrados.filter(p => valorCheck.includes(p.nombre));
+        }
+
+        if (precioMin != "" || precioMax != "") {
+            filtrados = filtrados.filter(p => p.precio >= precioMin && p.precio <= precioMax);
+        }
         // vaciamos la seccion de productos
         $('#seccionProductos').empty();
         // creamos los productos filtrados
-        creadorDeProductos(filtros);
+        creadorDeProductos(filtrados);
         // si no encontramos ningun producto que cumpla las condiciones del filtro se ejecuta este if con mensaje para el usuario
-        if (filtros.length <= 0) {
+        if (filtrados.length <= 0) {
             $('#seccionProductos').html('<h3>Lo sentimos no encontramos ningun producto con esas caracteristicas</h3>');
         }
-        // si el usuario hace click pero no usa ningun filtro, mostramos los productos sin filtros
+        // si el usuario hace click pero no uso ningun filtro, mostramos los productos como al inicio
     } else {
-        filtroErrores();
+        $('#seccionProductos').empty();
+        creadorDeProductos(productos);
     }
 }
-
-function filtroErrores() {
+// le agregamos al boton quitarFiltros, el reinicio de los productos para q se vuelvan a mostrar sin filtros.
+$('#btnRemoveFilt').on('click', function () {
     $('#seccionProductos').empty();
     creadorDeProductos(productos);
-}
-
-
+});

@@ -227,3 +227,40 @@ $('#btnRemoveFilt').on('click', function () {
     $('#seccionProductos').empty();
     creadorDeProductos(productos);
 });
+
+
+
+// carrousel de imagenes en contenedor-header
+let imagenes = ['img/Slider.jpg','http://www.jrautomotores.com.ar/wp-content/uploads/2016/10/JRAutomotoresCitroen.jpg','http://www.jrautomotores.com.ar/wp-content/uploads/2016/10/Chevrolet-Cruze-2.jpg', 'http://www.jrautomotores.com.ar/wp-content/uploads/2016/10/JR-AutomotoresAudi.jpg'];
+let cont = 0;
+
+function carrousel(contenedor){
+    contenedor.addEventListener('click', e =>{
+        let atras = document.getElementById('atras');
+        let adelante = document.getElementById('adelante');
+        let img = document.getElementById('img');
+        let tgt = e.target;
+
+        if(tgt == atras){
+            if(cont > 0){
+                img.src = imagenes[cont - 1];
+                cont--;
+            } else{
+                img.src= imagenes[imagenes.length - 1];
+                cont = imagenes.length -1;
+            }
+        } else if(tgt == adelante){
+            if(cont < imagenes.length - 1){
+                img.src = imagenes[cont + 1];
+                cont++;
+            } else{
+                img.src= imagenes[0];
+                cont = 0;
+            }
+        }
+    });
+}
+
+let contenedorHeader = document.getElementById('contenedorHeader');
+carrousel(contenedorHeader);
+

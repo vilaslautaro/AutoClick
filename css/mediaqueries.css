@@ -3,6 +3,9 @@
     .seccionCatalogo .text {
         padding-top: 30px;
     }
+    .contenedor-header img{
+        height: 400px;
+    }
     .sidebar{
         margin-top: 150px;
     }
@@ -19,6 +22,9 @@
 @media screen and (min-width: 1400px) {
     .seccionCatalogo {
         padding-top: 50px;
+    }
+    .contenedor-header img{
+        height: 500px;
     }
     .sidebar {
         margin-top: 200px;

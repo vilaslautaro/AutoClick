@@ -231,7 +231,7 @@ $('#btnRemoveFilt').on('click', function () {
 
 
 // carrousel de imagenes en contenedor-header
-let imagenes = ['img/Slider.jpg','http://www.jrautomotores.com.ar/wp-content/uploads/2016/10/JRAutomotoresCitroen.jpg','http://www.jrautomotores.com.ar/wp-content/uploads/2016/10/Chevrolet-Cruze-2.jpg', 'http://www.jrautomotores.com.ar/wp-content/uploads/2016/10/JR-AutomotoresAudi.jpg'];
+let imagenes = ['img/Slider.jpg','img/2.jpg','img/3.jpg', 'img/4.jpg'];
 let cont = 0;
 
 function carrousel(contenedor){

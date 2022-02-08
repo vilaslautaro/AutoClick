@@ -4,14 +4,13 @@
     --width: 402;
 }
     body {
+        background: #fff;
         width: 100%;
         margin: 0 auto !important;
         font-family: 'Montserrat', sans-serif;
-        max-width: 1800px;
     }
     /* layout */
     body .grid {
-        background: #ffffff;
         grid-template-areas: "header header header"
             "sidebar catalogo catalogo"
             "sidebar catalogo catalogo"
@@ -27,25 +26,32 @@
             /* contenedor-header */
             .header .contenedor .contenedor-header {
                 max-height: 300px;
+                position: relative;
                 z-index: 3;
             }
             .contenedor-header .imagen>img {
                 width: 100%;
+                border-radius: 0 0 100px 100px;
+                filter: brightness(0.75);
             
             }
             .contenedor-header .imagen>img:hover {
-                width: 100%;
-                transition: 0.5s ease all;
-                filter: brightness(0.75);            
+                border-radius: 0;
+                transition: 2s ease;
+                filter: brightness(1);
+                            
             }
         /* catalogo */
         .seccionCatalogo{
+            margin-top: 20px;
             padding-bottom: 30px;
-            background: #dddddd;
         }
             .seccionCatalogo .text {
                 margin: 10px auto 0;
                 display: flex;
+                font-size: 25px;
+                font-weight: 300;
+                color: #0300D4;
                 justify-content: center;
             }
             .seccionCatalogo .seccionProductos {
@@ -58,13 +64,18 @@
             }
                 .seccionCatalogo .seccionProductos .cajaProducto {
                     outline: none;
-                    margin: 10px 20px;
-                    border: 1px solid rgb(78, 78, 78);
+                    margin: 10px 20px 40px;
+                    box-shadow: 0 0 5px #0300D4;
                     display: flex;
                     flex-direction: column;
                     align-items: start;
                     border-radius: 10px;
                     background: #fff;
+                }
+
+                .seccionCatalogo .seccionProductos .cajaProducto:hover{
+                    box-shadow: 0 0 15px #0300D4;
+                    transition: 0.5s ease;
                 }
                     .seccionCatalogo .seccionProductos .cajaProducto .datosProducto {
                         margin: 5px 10px;
@@ -73,11 +84,10 @@
                         width: 300px;
                         height: 250px;
                         outline: none;
-                        border-bottom: 1px solid rgb(78, 78, 78);
                         border-radius: 10px 10px 0 0;
                     }
                     .seccionCatalogo .seccionProductos .cajaProducto .titulo {
-                        font-size: 20px;
+                        font-size: 15px;
                         color: #000000;
                         font-weight: 700;
                         align-self: center;
@@ -85,30 +95,34 @@
                         margin-bottom: 5px;
                     }
                     .seccionCatalogo .seccionProductos .cajaProducto .descripcion {
-                        font-size: 17px;
+                        font-size: 12px;
                         color: #000000;
                         margin: 5px auto;
                     }
                     .seccionCatalogo .seccionProductos .cajaProducto .precio {
                         margin: 5px auto;
-                        font-size: 18px;
+                        font-size: 15px;
                         font-weight: 600;
                         color: #000000;
                         ;
                     }
                     .seccionCatalogo .seccionProductos .cajaProducto .btn {
                         width: 100%;
+                        margin-top: 5px;
                         padding: 10px 0;
-                        background: #0400ff;
-                        color: #fff;
-                        font-size: 20px;
+                        background: #fff;
+                        color: #0300D4;
                         border: none;
+                        border-top: 1px solid #0300D4;
+                        font-size: 20px;
+                        font-weight: 500;
                         border-radius: 0 0 10px 10px;
                     }
                         .seccionCatalogo .seccionProductos .cajaProducto .btn:hover {
                             cursor: pointer;
-                            background: #000a94;
-                            transition: all ease 0.5s;
+                            background: #0300D4;
+                            color: #fff;
+                            transition: ease 0.5s;
                         }
                 .seccionCatalogo .seccionProductos .productoAgregado {
                     display: none;
@@ -117,8 +131,8 @@
                     bottom: 40px;
                     position: fixed;
                     padding: 10px;
-                    color: #0400ff;
-                    background: #fff;
+                    color: #fff;
+                    background: #0300D4;
                     font-size: 22px;
                     opacity: 0.95;
                     border-radius: 33px 0px 0px 33px;
@@ -126,43 +140,53 @@
                 }
         /* sidebar */
         .sidebar{
-            background: #dddddd;
-            padding: 0 20px;
+            margin: 0 40px;
+            padding: 0;
             z-index:2;
+            width: 100%;
         }
             .sidebar .filtros .formulario{
                 color: rgb(0, 0, 0);
-                margin: 80px 0 0 0;
+                margin: 40px 0 0 0;
+                background: #fff;
+                border-radius: 33px;
+                box-shadow: 0 0 5px #0300D4;
                 padding: 20px;
             }
                 .sidebar .filtros .formulario .textosForm{
                     margin: 25px 0 5px;
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: #0300D4;
                 }
                 .sidebar .filtros .formulario .cajaSubtextos{
                     display: flex;
-                    flex-flow: row wrap;
-                    justify-content: space-between;
+                    flex-flow: column wrap;
+                    align-items: flex-start;
                 }
                     .sidebar .filtros .formulario .cajaSubtextos .subtextosForm{
-                        margin: 7px 0 0;
+                        font-size: 15px;
+                        color: #0300D4;
+                        margin: 7px 0 5px;
                     }
                 .sidebar .filtros .formulario .marcasForm{
                     margin: 7px 5px;    
                 }
                 .sidebar .filtros .formulario .btnForm{
-                    background: #0300D4;
-                    color: #fff;
-                    border: 1px solid rgba(221, 221, 221, 0);
+                    background: transparent;
+                    color: #0300D4;
+                    border: 1px solid #0300D4;
                     padding: 5px 10px;
                     border-radius: 10px;
                     
                 }
                     .sidebar .filtros .formulario .btnForm:hover{
-                        background: #ddd;
-                        color: #0300D4;
+                        background: #0300D4;
+                        transition: 0.5s ease;
+                        color: #fff;
                         border: 1px solid #0300D4;
                         cursor: pointer;   
                     }
                 .sidebar .filtros .formulario .btnSendForm{
-                    margin-top: 25px;
+                    margin-top: 10px;
                 }

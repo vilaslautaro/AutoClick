@@ -1,9 +1,16 @@
 .contenedor__formulario{
-    margin: 10px;
+    padding: 60px 0 100px;
+    display: grid;
+    background: url("/img/autodeportivo.jpg");
+    background-size: contain;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+
 }
     .contenedor__titulo{
-        margin: 0 auto;
+        margin: 10px 0 0;
         display: flex;
+        color: #fff;
         justify-content: center;
         margin-bottom: 30px;
         font-size: 35px;
@@ -12,18 +19,24 @@
         display: flex;
         flex-flow: column wrap;
         margin: 0 auto;
+        background: #fff;
+        border: 2px solid #0300d4;
+        border-radius: 33px;
         width: 40%;
+        padding: 20px 40px;
         align-items: center;
         justify-content: center;
     }
         .formulario__texto{
-            margin: 5px 0;
+            margin: 2px 0 0;
             align-self: flex-start;
-            font-size: 20px;
+            font-size: 18px;
+            color: #0300d4;
         }
         .formulario__input{
             width: 100%;
-            padding: 2.5px 5px;
+            margin-bottom: 15px;
+            padding: 2px 5px;
             font-size: 15px;
         }
             .formulario__input:focus,
@@ -37,18 +50,18 @@
         }
         .formulario__boton{
             margin: 20px 0;
-            background: #0300d4;
-            color: #fff;
+            background: transparent;
+            color: #0300d4;
             font-size: 20px;
             outline: none;
-            border-radius: 15px;
-            border: 1px solid #fff;
-            padding: 5px 10px;
+            border-radius: 33px;
+            border: 2px solid #0300d4;
+            padding: 10px 15px;
         }
             .formulario__boton:hover{
-                background: #fff;
+                background: #0300d4;
                 cursor: pointer;
                 font-weight: 500;
-                color: #0300d4;
-                border: 1px solid #0300d4; 
+                color: #fff;
+                transition: 0.5s ease;
             }

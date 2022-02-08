@@ -5,15 +5,17 @@ function creadorDeProductos(productos, id) {
     for (let producto of productos) {
         // cargamos de contenido el nuevo elemento
         $('#seccionProductos').append(` <div class="cajaProducto">
+        <div class="subcajaProducto">
                                                 <img class="imagenProducto" src="${producto.imagen}" alt="">
                                                 <div class="datosProducto">
                                                     <p class="titulo">${producto.nombre}</p>
                                                     <p class="descripcion">${producto.descripcion}</p>
                                                     <p class="precio">USD ${producto.precio}</p>
                                                 </div>
-                                                <button id="${producto.id}" class="btn">Agregar al carrito</button>
+                                                </div>
                                                 <span id="productoAgregado" class="productoAgregado">Su producto ha sido agregado correctamente al carrito</span>
-                                            </div>`);
+                                                <button id="${producto.id}" class="btn">Agregar al carrito</button>
+                                                </div>`);
     }
     // evento que al hacer click en el boton "agregar producto" ejecuta la funcion que añade el producto al carrito
     $('.btn').click(añadirProductosCarrito);
@@ -62,6 +64,7 @@ function vistaProductosCarrito(lista) {
     $('.imgDltProd').click(eliminarProdCarrito);
     // evento que envia la compra con el metodo .post (boton finalizar compra de procesamientoCompras.html)
     $("#finalizarCompra").click(enviarCompra);
+    calcularPrecioTotal();
 }
 // generador carrito del index.html
 function contenidoCarrito(productoslista) {
@@ -96,6 +99,7 @@ function procesamientoCarrito(productoslista) {
 function eliminarProdCarrito(e) {
     let productoEliminar = carritoProductos.findIndex(eliminados => eliminados.id == e.target.id);
     carritoProductos.splice(productoEliminar, 1);
+    // actualizo el precio total
     $('#btnCarrito').empty();
     // para carrito de la pagina procesamientoCompras
     $('#cajaCarrito').empty();
@@ -162,7 +166,7 @@ function calcularPrecioTotal() {
     // con el metodo map, extraemos el precio de los productos en el carrito y los guardamos en un array
     let arrayPrecios = carritoProductos.map(p => p.precio);
     // con el metodo reduce, sumamos todos los precios que quedaron guardados en el arrayPrecios asi nos da el total
-    let total = arrayPrecios.reduce((a, b) => a + b);
+    total = arrayPrecios.reduce((a, b) => a + b);
     return total;
 }
 

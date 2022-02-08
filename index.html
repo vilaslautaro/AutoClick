@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,10 +10,13 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/mediaqueries.css">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700;800&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <title>Autoclick</title>
 </head>
+
 <body id="body">
     <!-- layout -->
     <div class="grid">
@@ -22,14 +26,14 @@
                 <div class="menus">
                     <nav id="logo" class="logo">
                         <div>
-                            <a href="#"><img src="img/logo.png" alt="ecommerce" height="30px"></a>
+                            <a href="/index.html"><img src="img/logo.png" alt="ecommerce" height="30px"></a>
                         </div>
                     </nav>
                     <nav id="menu" class="menu">
-                        <a href="">Inicio</a>
-                        <a href="">Autos</a>
-                        <a href="">Camionetas</a>
-                        <a href="/contacto.html" target="_blank">Contacto</a>
+                        <a href="/index.html">Inicio</a>
+                        <a href="/index.html">Autos</a>
+                        <a href="/index.html">Camionetas</a>
+                        <a href="/contacto.html">Contacto</a>
                     </nav>
                     <div id="contenedorCarrito" class="contenedorCarrito"><img title="Carrito"
                             src="img/carritoicono.png" id="imagenCarrito" alt="" width="30px" height="30px"><span
@@ -55,7 +59,7 @@
                 </div>
                 <div class="contenedor-header">
                     <div class="imagen">
-                        <img src="img/Slider.jpg" width="1000px" alt="">
+                        <img src="img/Slider.jpg" alt="">
                     </div>
 
                 </div>
@@ -79,7 +83,7 @@
                 <!-- formulario -->
                 <form action="#" id="form" class="formulario" name="formFiltros" method="post">
                     <!-- boton de remover filtros -->
-                    <input type="reset" id="btnRemoveFilt" class="btnForm btnRemoveFilt" value="Quitar filtros">
+                    <input type="reset" id="btnRemoveFilt" class="btnForm btnRemoveFilt" value="Limpiar filtros">
                     <!-- caja de busqueda -->
                     <p class="textosForm">Busqueda</p>
                     <input type="text" class="searchForm" id="searchForm" maxlength="50" placeholder="Camaro">
@@ -106,11 +110,13 @@
                     <div class="cajaSubtextos">
                         <label for="">
                             <p class="subtextosForm">Min</p>
-                            <input type="number" class="precioForm" id="precioMin" placeholder="20000" min="0" max="199999">
+                            <input type="number" class="precioForm" id="precioMin" placeholder="20000" min="0"
+                                max="199999">
                         </label>
                         <label for="">
                             <p class="subtextosForm">Max</p>
-                            <input type="number" class="precioForm" id="precioMax" placeholder="100000" max="200000" min="1">
+                            <input type="number" class="precioForm" id="precioMax" placeholder="100000" max="200000"
+                                min="1">
                         </label>
                     </div><br>
                     <!-- boton de aplicar filtros -->
@@ -120,12 +126,39 @@
         </div>
         <!-- FOOTER -->
         <footer class="footer">
-            <div class="copyright">
-                <p class="copyuno">Todos los derechos reservados por 2021</p>
-                <p class="copydos">Sitio realizado por <a href="https://www.linkedin.com/in/lautarovilas/">Lautaro
-                        Vilas</a></p>
+            <div class="menus">
+                <div class="menuLogoFooter">
+                    <img src="img/logo2.png" class="logoFooter" alt="Logo autoclick">
+                    <div class="box_rrss">
+                    <a href="#" class="rrss">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="rrss">
+                        <i class="fab fa-facebook-square"></i>
+                    </a>
+                    </div>
+                </div>
+                <nav id="menu" class="menu">
+                    <p class="tituloMenu">Menu</p>
+                    <a href="/index.html">Inicio</a>
+                    <a href="/index.html">Autos</a>
+                    <a href="/index.html">Camionetas</a>
+                    <a href="/contacto.html">Contacto</a>
+                </nav>
+                <nav class="menuDos">
+                    <p class="tituloMenu">Sobre Nosotros</p>
+                    <li class="textMenuDos">Acerca De</li>
+                    <li class="textMenuDos">Politicas de Privacidad</li>
+                    <li class="textMenuDos">Trabaja con nosotros</li>
+                    <li class="textMenuDos">Franquicias</li>
+                </nav>
             </div>
-        </footer>
+                <div class="copyright">
+                    <p class="copyuno">Todos los derechos reservados por AutoClick en 2022</p>
+                    <p class="copydos">Sitio web realizado por <a href="https://vilaslautaro.github.io/" target="_blank">Lautaro Vilas</a></p>
+                </div>
+    </div>
+    </footer>
     </div>
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -135,4 +168,5 @@
     <script src="js/main.js"></script>
     <script src="js/class.js"></script>
 </body>
+
 </html>

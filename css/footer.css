@@ -6,14 +6,82 @@ footer {
     display: flex;
     flex-flow: column wrap;
 }
+
+
+footer .menus{
+    margin: 20px 20px 0;
+    display: grid; 
+    color: #fff;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+footer .menuLogoFooter{
+    display: flex;
+    flex-flow: column wrap;
+}
+footer .logoFooter{
+    width: 200px;
+    cursor: pointer;
+}
+
+footer .box_rrss{
+    display: flex;
+    flex-flow: column row;
+    margin-left: 35px;
+}
+
+footer .rrss{
+    margin: 10px 15px 0;
+    font-size: 40px;
+    color: #fff;
+    text-decoration: none;
+}
+
+footer .menus .menu{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+footer .tituloMenu{
+    margin: 0;
+    font-size:20px; 
+    font-weight: 700;
+}
+
+footer .menus .menu a{
+    color :#fff;
+    margin: 10px 0 0;
+    text-decoration: none;
+}
+footer .menus .menu a:hover{
+    text-decoration: underline;
+}
+
+footer .menuDos{
+    list-style: none;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+footer .menuDos .textMenuDos{
+    margin: 10px 0 0;
+}
+footer .menuDos .textMenuDos:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
     footer .copyright {
         width: 99%;
+        margin-top: 20px;
+        border-top: 1px solid #fff;
         display: flex;
         color: #ffffff;
         justify-content: space-around;
         align-content: center;
         padding: 0 10px;
-        font-size: 18px;
+        font-size: 15px;
     }
         footer .copyright a {
             color: #ffffff;

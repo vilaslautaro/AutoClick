@@ -10,7 +10,7 @@ $(document).ready(function () {
 });
 $(window).on('load', function () {
     // cuando termine de cargar las imagenes y otros recursos, le cambio el titulo de la seccion de la tienda de "Cargando Productos..." a "Nuestros Productos"
-    $('#tituloProductos').html(`Nuestros Productos`);
+    $('#tituloProductos').html(`Tienda`);
 });
 // evento que muestra u oculta el carrito cuando el usuario da click en el mismo
 $('#imagenCarrito').click(mostrarOcultarCarrito);
